@@ -1,0 +1,383 @@
+/* Base Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #f0f4f8;
+    background: linear-gradient(120deg, #1e2a38, #263343);
+    line-height: 1.6;
+}
+
+/* Header */
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 2rem; 
+    background: #102027;
+    color: #fdd835;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+header.header:hover {
+    background: #1c2a33;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #fdd835;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #f0f4f8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #fdd835;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Home Section */
+.home {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.home:hover {
+    box-shadow: 0 16px 40px rgba(253, 216, 53, 0.2);
+}
+
+.home img {
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 160px;
+    height: 160px;
+    object-fit: fill;
+    border-radius: 50%;
+    border: 4px solid #fdd835;
+    box-shadow: 0 0 25px rgba(253, 216, 53, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.home img:hover {
+    transform: scale(1.05);
+}
+
+.home h1 {
+    font-size: 2.8rem;
+    color: #fff176;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.home h1:hover {
+    color: #ffee58;
+}
+
+.home p {
+    font-size: 1.25rem;
+    color: #eceff1;
+    max-width: 720px;
+    margin: auto;
+    line-height: 1.7;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h2 {
+    color: #fdd835;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #fdd835;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #fff176;
+    border-color: #fff176;
+}
+
+/* Experience Section */
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.experience .job {
+    background: #263343;
+    padding: 2rem;
+    border-left: 5px solid #fdd835;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.experience .job:hover {
+    transform: translateY(-5px);
+    background: #2f3d4f;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.experience .job h3 {
+    margin-top: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+/* React Icons Styling */
+.job .icon {
+    margin-right: 0.5rem;
+    color: #fdd835;
+    vertical-align: middle;
+    transition: transform 0.3s ease, color 0.3s ease;
+}  
+
+.job:hover .icon {
+    transform: scale(1.2);
+    color: #fff176;
+}
+
+/* Contact Section */
+.contact {
+    background: #37474f;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+.contact:hover {
+    background: #455a64;
+}
+
+.contact a {
+    color: #fdd835;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #fff176;
+}
+
+/* Optional: Add a nice fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section,
+.experience .job,
+.home,
+.contact {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Delay effect for cards */
+.experience .job:nth-child(2) {
+    animation-delay: 0.1s;
+}
+/* Footer Section */
+.footer {
+    background-color: #102027;
+    color: #f0f4f8;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: #fdd835;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff176;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    .experience {
+        grid-template-columns: 1fr;
+    }
+
+    .home h1 {
+        font-size: 2.2rem;
+    }
+
+    .home p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header.header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+        display: flex;             
+        flex-direction: row;    
+        gap: 1rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        padding: 0.5rem 0;
+        width: 100%;
+        display: block;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .home {
+        padding: 2rem 1rem;
+    }
+
+    .home img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+
+    .experience .job {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-content {
+        gap: 0.5rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 1.75rem;
+    }
+
+    .home p {
+        font-size: 0.95rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .contact {
+        padding: 1.5rem 1rem;
+    }
+
+    .experience .job {
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+}
